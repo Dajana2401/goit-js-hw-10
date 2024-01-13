@@ -1,5 +1,6 @@
 import { fetchCountries } from './fetchCountries.js';
 import Notiflix from 'notiflix';
+import debounce from 'lodash.debounce';
 let searchBox = document.getElementById('search-box');
 let selectCountries = document.getElementById('select-countries');
 function renderCountries(countries) {
@@ -38,6 +39,6 @@ let f = debounce(function () {
     selectCountries.innerHTML = '';
   }
 }, 300);
-searchBox.addEventListener('keyup', function () {
+searchBox.addEventListener('input', function () {
   f();
 });
