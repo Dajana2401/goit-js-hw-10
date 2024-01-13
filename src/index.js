@@ -39,6 +39,4 @@ let f = debounce(function () {
     selectCountries.innerHTML = '';
   }
 }, 300);
-searchBox.addEventListener('input', function () {
-  f();
-});
+searchBox.addEventListener('input', f);
