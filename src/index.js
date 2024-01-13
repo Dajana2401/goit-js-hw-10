@@ -1,4 +1,5 @@
 import { fetchCountries } from './fetchCountries.js';
+import Notiflix from 'notiflix';
 let searchBox = document.getElementById('search-box');
 let selectCountries = document.getElementById('select-countries');
 function renderCountries(countries) {
